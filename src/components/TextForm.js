@@ -31,9 +31,9 @@ export default function TextForm(props) {
 
   const handleCopy=()=>{
     let newText=document.getElementById("myBox");
-    newText.select(); //select method selects the entire text written in the box
+    // newText.select(); //select method selects the entire text written in the box
     navigator.clipboard.writeText(newText.value); //this function is used to copy a text in clipboard
-    document.getSelection().removeAllRanges(); // after copy task the engine deselect the text
+    // document.getSelection().removeAllRanges(); // after copy task the engine deselect the text
     props.showAlert("Copied to clipboard","success");
   }
   // to copy text
