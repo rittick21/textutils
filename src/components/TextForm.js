@@ -65,9 +65,9 @@ export default function TextForm(props) {
     <div className="container my-3">
     <h1>Your Text summary</h1>
     {/* split function splits the string as per your requrements */}
-    {/* <p>{text.split(/\S+/).length-1} words and {text.length} characters including spaces</p>  */}
+    <p>{text.split(/\S+/).filter((element)=>{return element.length!==0}).length} words and {text.length} characters including spaces</p> 
     {/* Alternative method */}
-     <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters including spaces</p> 
+     {/* <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters including spaces</p>  */}
     {/* use of regex */}
     <p>{0.008*text.split(" ").filter((element)=>{return element.length!==0}).length} Minutes to read</p>
     <p>Number of Sentence: {text.split(/\./).length-1}</p>
